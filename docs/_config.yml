@@ -1,0 +1,59 @@
+# Book settings
+title: AEnvironment
+author: Ant Group
+logo: images/logo.png
+copyright: "2025"
+
+# Force re-execution of notebooks on each build
+execute:
+  execute_notebooks: auto
+
+# Define the name of the latex output file for PDF builds
+latex:
+  latex_documents:
+    targetname: aenvironment.tex
+
+# Add a bibtex file so that we can create citations
+bibtex_bibfiles:
+  - references.bib
+
+# Information about where the book exists on the web
+repository:
+  url: https://github.com/inclusionAI/aenvironment
+  path_to_book: docs
+  branch: main
+
+# Add GitHub buttons to your book
+html:
+  use_issues_button: true
+  use_repository_button: true
+  use_edit_page_button: true
+  home_page_in_navbar: false
+
+# Launch button settings
+launch_buttons:
+  notebook_interface: classic
+  binderhub_url: ""
+  colab_url: ""
+
+# Parse and render settings
+parse:
+  myst_enable_extensions:
+    - colon_fence
+    - deflist
+    - dollarmath
+    - html_admonition
+    - html_image
+    - linkify
+    - replacements
+    - smartquotes
+    - substitution
+
+sphinx:
+  extra_extensions:
+    - sphinx_design
+    - sphinxcontrib.mermaid
+  config:
+    html_theme_options:
+      navigation_with_keys: false
+    mermaid_version: "10.6.1"

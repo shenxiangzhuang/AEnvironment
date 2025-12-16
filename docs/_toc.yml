@@ -1,0 +1,34 @@
+# Table of contents
+format: jb-book
+root: intro
+parts:
+  - caption: Getting Started
+    chapters:
+      - file: getting_started/installation
+      - file: getting_started/quickstart
+      - file: getting_started/concepts
+
+  - caption: User Guide
+    chapters:
+      - file: guide/environments
+      - file: guide/sdk
+      - file: guide/cli
+
+  - caption: Architecture
+    chapters:
+      - file: architecture/architecture
+
+  - caption: Examples
+    chapters:
+      - file: examples/weather_tools
+      - file: examples/swe_benchmark
+      - file: examples/agent_as_env
+
+  - caption: Roadmap
+    chapters:
+      - file: roadmap
+
+  - caption: Development
+    chapters:
+      - file: development/development
+      - file: development/contributing
