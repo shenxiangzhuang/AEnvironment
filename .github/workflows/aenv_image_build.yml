@@ -1,4 +1,4 @@
-name: Docker Build and Push
+name: AEnv Images Build and Push
 
 on:
   workflow_dispatch:
@@ -34,8 +34,6 @@ jobs:
             type=ref,event=branch
             type=ref,event=pr
             type=semver,pattern={{version}}
-            type=semver,pattern={{major}}.{{minor}}
-            type=semver,pattern={{major}}
             type=sha
 
       - name: Extract metadata for envhub
