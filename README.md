@@ -4,7 +4,7 @@
 </p>
 
 <p align="center">
-  <img src="./docs/images/cover.jpeg" alt="AEnvironment Architecture" width="800"/>
+  <img src="./docs/images/cover.png" alt="AEnvironment Architecture" width="800"/>
 </p>
 
 <p align="center">
@@ -56,10 +56,12 @@ async with Environment("mini-program@1.0.0") as env:
     })
 ```
 
-<video width="800" controls>
-  <source src="./docs/vedios/mini-program-demo.mov" type="video/quicktime">
-  Your browser does not support the video tag. <a href="./docs/vedios/mini-program-demo.mov">Download the video</a> instead.
-</video>
+
+
+https://github.com/user-attachments/assets/23d68f94-3e10-478f-b7da-8f6ee18e47ed
+
+
+
 
 📖 See [Mini Program Example](./aenv/examples/mini-program/README.md) for details.
 
@@ -99,7 +101,7 @@ With Agent as Environment, you can:
 async with Environment("agent-b@1.0.0") as agent_b:
     # List available tools from Agent B
     tools = await agent_b.list_tools()
-    
+
     # Call Agent B's chat tool
     response = await agent_b.call_tool("chat", {"message": "Hello!"})
     print(response.content)
@@ -210,25 +212,6 @@ aenv build && aenv push
 # List remote environments
 aenv list
 ```
-
-## Architecture
-
-```text
-┌─────────────────────────────────────────────────────────────┐
-│                        Clients                              │
-│              (Python SDK / CLI / AI Agents)                 │
-└─────────────────────────┬───────────────────────────────────┘
-                          │ MCP Protocol
-┌─────────────────────────▼───────────────────────────────────┐
-│                     API Service                             │
-├─────────────────────────────────────────────────────────────┤
-│  Controller  │  EnvHub Registry  │  Scheduler              │
-├─────────────────────────────────────────────────────────────┤
-│                    Kubernetes Engine                        │
-└─────────────────────────────────────────────────────────────┘
-```
-
-📖 For detailed architecture documentation, see [Architecture](./docs/architecture/architecture.md).
 
 ## Performance
 
