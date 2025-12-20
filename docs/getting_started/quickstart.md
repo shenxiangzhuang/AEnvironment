@@ -199,7 +199,7 @@ async def local_usage():
     async with Environment("helloworld") as env:
         # Discover available tools
         tools = await env.list_tools()
-        print(f"🔧 Available tools: {[t.name for t in tools]}")
+        print(f"🔧 Available tools: {[t["name"] for t in tools]}")
 
         # Call custom tool
         result = await env.call_tool(
